@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #f7f8fc;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* MAIN LAYOUT */
+
+.nexora-login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  overflow: hidden;
+}
+
+/* =========================
+   LEFT BRAND PANEL
+========================= */
+
+.brand-panel {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 48px 8%;
+  color: white;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(75, 102, 255, 0.45), transparent 28%),
+    radial-gradient(circle at 85% 80%, rgba(0, 210, 180, 0.22), transparent 30%),
+    linear-gradient(135deg, #11162c 0%, #18214a 50%, #10162c 100%);
+}
+
+.brand-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* LOGO */
+
+.logo,
+.mobile-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #6575ff, #45e2c5);
+  color: #10162c;
+  font-size: 21px;
+  font-weight: 800;
+  box-shadow: 0 10px 30px rgba(69, 226, 197, 0.2);
+}
+
+/* HERO */
+
+.hero-text {
+  margin-top: auto;
+  margin-bottom: 55px;
+}
+
+.eyebrow,
+.login-tag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.eyebrow {
+  color: #6ce6d1;
+  margin-bottom: 22px;
+}
+
+.hero-text h1 {
+  max-width: 620px;
+  font-family: "Outfit", sans-serif;
+  font-size: clamp(42px, 4vw, 66px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.hero-text h1 span {
+  display: block;
+  color: #9aa7ff;
+}
+
+.hero-description {
+  max-width: 520px;
+  margin-top: 25px;
+  color: #aeb8d7;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* FEATURES */
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.feature {
+  padding: 18px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+}
+
+.feature-icon {
+  color: #68e7d0;
+  font-size: 22px;
+}
+
+.feature strong,
+.feature small {
+  display: block;
+}
+
+.feature strong {
+  font-size: 13px;
+}
+
+.feature small {
+  margin-top: 3px;
+  color: #8f9abc;
+  font-size: 10px;
+}
+
+/* DECORATION */
+
+.background-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.orb-one {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  right: -80px;
+  background: #5b6dff;
+}
+
+.orb-two {
+  width: 250px;
+  height: 250px;
+  bottom: -120px;
+  left: -100px;
+  background: #20d8bc;
+}
+
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    linear-gradient(#ffffff 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff 1px, transparent 1px);
+  background-size: 45px 45px;
+}
+
+/* =========================
+   RIGHT LOGIN PANEL
+========================= */
+
+.login-panel {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background: #fbfcff;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 430px;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.login-title {
+  margin-bottom: 42px;
+}
+
+.login-tag {
+  color: #5e70ff;
+  margin-bottom: 13px;
+}
+
+.login-title h2 {
+  font-family: "Outfit", sans-serif;
+  color: #18213d;
+  font-size: 35px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.login-title>p:last-child {
+  margin-top: 13px;
+  color: #8a92a8;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* FORM */
+
+.input-wrapper {
+  margin-bottom: 25px;
+}
+
+.input-wrapper label {
+  display: block;
+  margin-bottom: 9px;
+  color: #30384f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.input-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #e0e4ef;
+  border-radius: 13px;
+  padding: 0 16px;
+  background: white;
+  transition: 0.25s;
+}
+
+.input-box:focus-within {
+  border-color: #6877ff;
+  box-shadow: 0 0 0 4px rgba(104, 119, 255, 0.1);
+}
+
+.input-icon {
+  width: 25px;
+  color: #818ba4;
+  font-size: 15px;
+}
+
+.input-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 16px 5px;
+  background: transparent;
+  font-size: 14px;
+  color: #20283d;
+}
+
+.input-box input::placeholder {
+  color: #b4bac8;
+}
+
+/* PASSWORD */
+
+.password-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-label button {
+  border: none;
+  background: none;
+  color: #6172fa;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* BUTTON */
+
+.submit-button {
+  width: 100%;
+  min-height: 55px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 14px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #5969ed, #6c5de7);
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 15px 30px rgba(89, 105, 237, 0.25);
+  transition: 0.25s;
+}
+
+.submit-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 35px rgba(89, 105, 237, 0.32);
+}
+
+.submit-button b {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ERROR */
+
+.error-message {
+  padding: 13px 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  color: #c93c52;
+  background: #fff2f4;
+  border: 1px solid #ffdce1;
+  font-size: 13px;
+}
+
+/* SECURITY NOTE */
+
+.security-note {
+  margin-top: 28px;
+  text-align: center;
+  color: #a2a8b7;
+  font-size: 11px;
+}
+
+.security-note span {
+  color: #5e70ff;
+  margin-right: 5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .nexora-login {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-panel {
+    display: none;
+  }
+
+  .login-panel {
+    min-height: 100vh;
+  }
+
+  .mobile-logo {
+    display: flex;
+    margin-bottom: 50px;
+    color: #1b2440;
+  }
+}
+
+@media (max-width: 500px) {
+  .login-panel {
+    padding: 25px;
+  }
+
+  .login-title h2 {
+    font-size: 30px;
+  }
+
+  .mobile-logo {
+    margin-bottom: 35px;
+  }
+}
